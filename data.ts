@@ -72,7 +72,7 @@ export const landingPageData: LandingPageData = {
             "step": "02",
             "title": "Thi Công Chuyên Sâu",
             "desc": "Sử dụng máy móc hiện đại và hóa chất chuyên dụng để làm sạch sâu.",
-            "image": "https://images.unsplash.com/photo-1581578731117-104f2a41272c?q=80&w=800&auto=format&fit=crop"
+            "image": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=800&auto=format&fit=crop"
           },
           {
             "step": "03",
@@ -119,8 +119,8 @@ export const landingPageData: LandingPageData = {
             "price": "Chăm Sóc Nhà Toàn Diện",
             "features": ["Vệ sinh chi tiết Toilet/Bếp", "Sắp xếp nội thất gọn gàng", "Lau kính & Khung cửa"],
             "media": {
-              "src": "https://images.unsplash.com/photo-1584622050111-993a426fbf0a?q=80&w=800&auto=format&fit=crop",
-              "placeholder_src": "https://images.unsplash.com/photo-1584622050111-993a426fbf0a?q=80&w=800&auto=format&fit=crop"
+              "src": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=800&auto=format&fit=crop",
+              "placeholder_src": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=800&auto=format&fit=crop"
             }
           }
         ]
