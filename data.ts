@@ -1,3 +1,4 @@
+
 import { LandingPageData } from './types';
 
 export const landingPageData: LandingPageData = {
@@ -65,25 +66,25 @@ export const landingPageData: LandingPageData = {
             "step": "01",
             "title": "Khảo Sát Miễn Phí",
             "desc": "Chuyên gia đến tận nơi đánh giá hiện trạng và tư vấn giải pháp tối ưu.",
-            "image": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=600&auto=format&fit=crop"
+            "image": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=800&auto=format&fit=crop"
           },
           {
             "step": "02",
             "title": "Thi Công Chuyên Sâu",
             "desc": "Sử dụng máy móc hiện đại và hóa chất chuyên dụng để làm sạch sâu.",
-            "image": "https://images.unsplash.com/photo-1581578731117-104f2a41272c?q=80&w=600&auto=format&fit=crop"
+            "image": "https://images.unsplash.com/photo-1581578731117-104f2a41272c?q=80&w=800&auto=format&fit=crop"
           },
           {
             "step": "03",
             "title": "Khử Khuẩn & Tạo Mùi",
             "desc": "Phun khử khuẩn Nano bạc và tạo hương thơm tự nhiên sang trọng.",
-            "image": "https://images.unsplash.com/photo-1528740561666-dc2479dc08ab?q=80&w=600&auto=format&fit=crop"
+            "image": "https://images.unsplash.com/photo-1585435557343-3b092031a831?q=80&w=800&auto=format&fit=crop"
           },
           {
             "step": "04",
             "title": "Nghiệm Thu & Hài Lòng",
             "desc": "Gia chủ kiểm tra tỉ mỉ. Chỉ thanh toán khi hoàn toàn hài lòng 100%.",
-            "image": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=600&auto=format&fit=crop"
+            "image": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=800&auto=format&fit=crop"
           }
         ]
       }
@@ -118,8 +119,8 @@ export const landingPageData: LandingPageData = {
             "price": "Chăm Sóc Nhà Toàn Diện",
             "features": ["Vệ sinh chi tiết Toilet/Bếp", "Sắp xếp nội thất gọn gàng", "Lau kính & Khung cửa"],
             "media": {
-              "src": "https://images.unsplash.com/photo-1527512860163-2182622b7539?q=80&w=800&auto=format&fit=crop",
-              "placeholder_src": "https://images.unsplash.com/photo-1527512860163-2182622b7539?q=80&w=800&auto=format&fit=crop"
+              "src": "https://images.unsplash.com/photo-1584622050111-993a426fbf0a?q=80&w=800&auto=format&fit=crop",
+              "placeholder_src": "https://images.unsplash.com/photo-1584622050111-993a426fbf0a?q=80&w=800&auto=format&fit=crop"
             }
           }
         ]
@@ -132,13 +133,13 @@ export const landingPageData: LandingPageData = {
         "headline": "Hiệu Quả Thực Tế",
         "description": "Sự thay đổi ngoạn mục. Chúng tôi biến 'Cũ' thành 'Mới', biến 'Bẩn' thành 'Sáng Bóng'.",
         "before_image": {
-          "src": "https://images.unsplash.com/photo-1584622050111-993a426fbf0a?q=80&w=1600&auto=format&fit=crop",
-          "placeholder_src": "https://images.unsplash.com/photo-1584622050111-993a426fbf0a?q=80&w=1600&auto=format&fit=crop",
+          "src": "https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=1600&auto=format&fit=crop",
+          "placeholder_src": "https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=1600&auto=format&fit=crop",
           "label": "Hiện Trạng Cũ"
         },
         "after_image": {
-          "src": "https://images.unsplash.com/photo-1584622050111-993a426fbf0a?q=80&w=1600&auto=format&fit=crop",
-          "placeholder_src": "https://images.unsplash.com/photo-1584622050111-993a426fbf0a?q=80&w=1600&auto=format&fit=crop",
+          "src": "https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=1600&auto=format&fit=crop",
+          "placeholder_src": "https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=1600&auto=format&fit=crop",
           "label": "Sau Xử Lý (ThangPro)"
         }
       }
