@@ -3,6 +3,7 @@ import { landingPageData } from './data';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import PainPoints from './components/PainPoints';
+import Process from './components/Process';
 import Services from './components/Services';
 import SocialProof from './components/SocialProof';
 import Testimonials from './components/Testimonials';
@@ -20,7 +21,6 @@ const App: React.FC = () => {
     const hero = landingPageData.content.find(c => c.type === 'hero_banner');
     if (hero) {
       const heroData = hero.data as HeroBannerData;
-      // Assuming secondary CTA might contain a phone number text
       return heroData.cta_secondary; 
     }
     return "0900000000";
@@ -36,7 +36,7 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col font-sans text-brand-dark bg-brand-light">
+    <div className="min-h-screen flex flex-col font-sans text-brand-dark bg-brand-light antialiased">
       <Header title={landingPageData.config.seo.title} phone={phone} />
 
       <main className="flex-grow">
@@ -46,6 +46,8 @@ const App: React.FC = () => {
               return <Hero key={section.id} data={section.data} />;
             case 'grid_3_col':
               return <PainPoints key={section.id} data={section.data} />;
+            case 'process_steps':
+              return <Process key={section.id} data={section.data} />;
             case 'service_list':
               return <Services key={section.id} data={section.data} />;
             case 'before_after_slider':

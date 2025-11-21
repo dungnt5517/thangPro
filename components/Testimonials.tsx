@@ -7,35 +7,36 @@ interface TestimonialsProps {
 
 const Testimonials: React.FC<TestimonialsProps> = ({ data }) => {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-24 bg-slate-50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-brand-blue mb-12">{data.headline}</h2>
+        <div className="text-center mb-20">
+          <h2 className="font-serif text-4xl md:text-5xl font-bold text-brand-blue mb-4">{data.headline}</h2>
+          <div className="w-24 h-1 bg-gold-gradient mx-auto rounded-full"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
           {data.reviews.map((item, index) => (
-            <div key={index} className="bg-slate-50 p-8 rounded-xl shadow-sm hover:shadow-md transition border border-slate-100 flex flex-col relative">
-              <i className="fa-solid fa-quote-left text-4xl text-brand-blue/10 absolute top-6 left-6"></i>
+            <div key={index} className="bg-white p-10 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 flex flex-col relative border border-slate-100">
+              <div className="absolute -top-5 -left-5 w-12 h-12 bg-brand-gold flex items-center justify-center rounded-full text-white text-xl shadow-lg">
+                <i className="fa-solid fa-quote-left"></i>
+              </div>
               
-              <p className="text-gray-600 italic mb-6 flex-grow relative z-10 pt-6">"{item.text}"</p>
+              <p className="text-slate-600 italic mb-8 flex-grow text-lg leading-relaxed font-light">"{item.text}"</p>
               
-              <div className="flex items-center border-t border-slate-200 pt-4">
+              <div className="flex items-center pt-6 border-t border-slate-100">
                 <img 
                   src={item.avatar_placeholder} 
                   alt={item.name} 
-                  className="w-12 h-12 rounded-full object-cover mr-4 bg-gray-200" 
+                  className="w-14 h-14 rounded-full object-cover mr-4 border-2 border-brand-gold p-0.5" 
                 />
                 <div>
-                  <h4 className="font-bold text-brand-blue">{item.name}</h4>
-                  <p className="text-xs text-gray-500 uppercase tracking-wide">{item.info}</p>
+                  <h4 className="font-bold text-brand-blue text-lg font-serif">{item.name}</h4>
+                  <p className="text-xs text-slate-500 uppercase tracking-wide font-medium">{item.info}</p>
                 </div>
-                <div className="ml-auto flex text-yellow-400 text-xs">
-                  <i className="fa-solid fa-star"></i>
-                  <i className="fa-solid fa-star"></i>
-                  <i className="fa-solid fa-star"></i>
-                  <i className="fa-solid fa-star"></i>
-                  <i className="fa-solid fa-star"></i>
+                <div className="ml-auto flex gap-1">
+                  {[1,2,3,4,5].map(i => (
+                     <i key={i} className="fa-solid fa-star text-brand-gold text-xs"></i>
+                  ))}
                 </div>
               </div>
             </div>

@@ -7,47 +7,46 @@ interface OfferCTAProps {
 
 const OfferCTA: React.FC<OfferCTAProps> = ({ data }) => {
   return (
-    <section id="offer_cta" className="py-20 bg-gradient-to-br from-brand-blue to-slate-900 text-white relative overflow-hidden">
-      {/* Decorative Circles */}
-      <div className="absolute top-0 left-0 w-64 h-64 bg-white/5 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-brand-gold/10 rounded-full translate-x-1/3 translate-y-1/3"></div>
-
+    <section id="offer_cta" className="py-24 bg-brand-blue relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(#D4AF37 1px, transparent 1px)', backgroundSize: '30px 30px' }}></div>
+      
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 leading-tight">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="font-serif text-4xl md:text-6xl font-bold mb-6 leading-tight text-white">
               {data.headline}
             </h2>
-            <p className="text-xl md:text-2xl text-brand-gold font-semibold">
+            <p className="text-xl md:text-2xl text-brand-gold font-serif italic">
               {data.subheadline}
             </p>
           </div>
 
-          <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl overflow-hidden shadow-2xl">
+          <div className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl overflow-hidden shadow-2xl">
              <div className="grid grid-cols-1 lg:grid-cols-2">
                 
                 {/* Left: Form & Info */}
-                <div className="p-8 md:p-12 flex flex-col justify-center">
-                   <div className="space-y-8 mb-8">
-                      <div className="flex items-center">
-                          <div className="w-14 h-14 rounded-full bg-brand-gold flex items-center justify-center text-brand-blue text-2xl mr-4 flex-shrink-0">
+                <div className="p-8 md:p-16 flex flex-col justify-center">
+                   <div className="space-y-8 mb-10">
+                      <div className="flex items-start">
+                          <div className="w-12 h-12 rounded-full border border-brand-gold flex items-center justify-center text-brand-gold text-xl mr-6 flex-shrink-0 mt-1">
                             <i className="fa-solid fa-phone"></i>
                           </div>
                           <div>
-                            <div className="text-sm text-slate-300 uppercase tracking-wider">Hotline tư vấn 24/7</div>
-                            <a href={`tel:${data.phone.replace(/[^\d]/g, '')}`} className="text-3xl font-bold text-white hover:text-brand-gold transition">
+                            <div className="text-xs text-slate-400 uppercase tracking-widest mb-1">Hotline VIP 24/7</div>
+                            <a href={`tel:${data.phone.replace(/[^\d]/g, '')}`} className="text-2xl md:text-3xl font-bold text-white hover:text-brand-gold transition font-serif">
                               {data.phone}
                             </a>
                           </div>
                       </div>
 
-                      <div className="flex items-center">
-                          <div className="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center text-white text-2xl mr-4 flex-shrink-0">
-                            <i className="fa-solid fa-map-location-dot"></i>
+                      <div className="flex items-start">
+                          <div className="w-12 h-12 rounded-full border border-brand-gold flex items-center justify-center text-brand-gold text-xl mr-6 flex-shrink-0 mt-1">
+                            <i className="fa-solid fa-location-dot"></i>
                           </div>
                           <div>
-                            <div className="text-sm text-slate-300 uppercase tracking-wider">Địa chỉ văn phòng</div>
-                            <div className="text-white font-medium text-lg">
+                            <div className="text-xs text-slate-400 uppercase tracking-widest mb-1">Văn Phòng</div>
+                            <div className="text-white text-lg font-light">
                               {data.address}
                             </div>
                           </div>
@@ -55,12 +54,18 @@ const OfferCTA: React.FC<OfferCTAProps> = ({ data }) => {
                    </div>
 
                    {/* Form */}
-                   <div className="bg-white p-6 rounded-xl text-brand-dark">
-                      <h3 className="font-bold text-xl mb-4 text-center text-brand-blue">Đăng Ký Tư Vấn Miễn Phí</h3>
-                      <form className="space-y-3" onSubmit={(e) => { e.preventDefault(); alert('Cảm ơn bạn! Chúng tôi sẽ liên hệ sớm.'); }}>
-                        <input type="text" placeholder="Tên của bạn" className="w-full px-4 py-3 bg-gray-100 rounded border border-gray-300 text-gray-800 focus:outline-none focus:border-brand-blue" required />
-                        <input type="tel" placeholder="Số điện thoại" className="w-full px-4 py-3 bg-gray-100 rounded border border-gray-300 text-gray-800 focus:outline-none focus:border-brand-blue" required />
-                        <button type="submit" className="w-full bg-brand-gold text-brand-blue font-bold py-3 rounded hover:bg-yellow-400 transition shadow-lg animate-pulse text-lg uppercase">
+                   <div className="bg-white p-8 rounded-2xl shadow-xl">
+                      <h3 className="font-serif font-bold text-2xl mb-6 text-center text-brand-blue">Đăng Ký Tư Vấn Miễn Phí</h3>
+                      <form className="space-y-5" onSubmit={(e) => { e.preventDefault(); alert('Cảm ơn Quý khách! Chuyên gia của chúng tôi sẽ liên hệ lại trong 5 phút.'); }}>
+                        <div>
+                           <label className="block text-xs font-bold text-slate-500 uppercase mb-2">Họ và Tên</label>
+                           <input type="text" placeholder="Nhập họ tên..." className="w-full px-4 py-3 bg-slate-50 rounded-lg border border-slate-200 text-slate-800 focus:outline-none focus:border-brand-gold transition" required />
+                        </div>
+                        <div>
+                           <label className="block text-xs font-bold text-slate-500 uppercase mb-2">Số Điện Thoại</label>
+                           <input type="tel" placeholder="Nhập số điện thoại..." className="w-full px-4 py-3 bg-slate-50 rounded-lg border border-slate-200 text-slate-800 focus:outline-none focus:border-brand-gold transition" required />
+                        </div>
+                        <button type="submit" className="w-full bg-gold-gradient text-brand-blue font-bold py-4 rounded-lg hover:shadow-lg hover:-translate-y-1 transition-all duration-300 text-sm uppercase tracking-widest">
                           {data.button_text}
                         </button>
                       </form>
@@ -79,7 +84,7 @@ const OfferCTA: React.FC<OfferCTAProps> = ({ data }) => {
                         loading="lazy" 
                         referrerPolicy="no-referrer-when-downgrade"
                         title="Bản đồ vị trí"
-                        className="absolute inset-0 w-full h-full"
+                        className="absolute inset-0 w-full h-full grayscale hover:grayscale-0 transition-all duration-500"
                       ></iframe>
                    ) : (
                      <div className="flex items-center justify-center h-full text-white/50">

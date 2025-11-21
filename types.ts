@@ -20,7 +20,7 @@ export interface Media {
   src: string;
   placeholder_src: string;
   alt?: string;
-  video_src?: string; // Added optional video source
+  video_src?: string; 
 }
 
 // Section Types
@@ -53,6 +53,7 @@ export interface ServiceItem {
 
 export interface ServiceListData {
   headline: string;
+  subheadline?: string;
   items: ServiceItem[];
 }
 
@@ -87,7 +88,20 @@ export interface OfferCtaData {
   button_text: string;
   phone: string;
   address: string;
-  map_iframe_src?: string; // Added optional map iframe
+  map_iframe_src?: string; 
+}
+
+export interface ProcessStep {
+  step: string;
+  title: string;
+  desc: string;
+  image: string;
+}
+
+export interface ProcessData {
+  headline: string;
+  subheadline: string;
+  steps: ProcessStep[];
 }
 
 export interface ContactSectionData {
@@ -106,6 +120,7 @@ export type SectionContent =
   | { id: string; type: 'before_after_slider'; data: BeforeAfterSliderData }
   | { id: string; type: 'testimonial_cards'; data: TestimonialCardsData }
   | { id: string; type: 'countdown_offer'; data: OfferCtaData }
+  | { id: string; type: 'process_steps'; data: ProcessData } // Added Process
   | { id: string; type: 'contact_form'; data: ContactSectionData };
 
 export interface LandingPageData {

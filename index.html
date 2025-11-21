@@ -33,24 +33,34 @@
           extend: {
             colors: {
               brand: {
-                blue: '#0066CC', // Primary from JSON
-                gold: '#FFD700', // Secondary from JSON
-                dark: '#1A202C', // Text Dark
-                light: '#F7FAFC', // Bg Light
+                blue: '#0F172A', // Deep Royal Blue/Slate 900 for luxury
+                gold: '#D4AF37', // Metallic Gold
+                goldLight: '#F3E5AB',
+                dark: '#1A202C', 
+                light: '#F8FAFC', 
               }
             },
             fontFamily: {
               sans: ['Inter', 'sans-serif'],
+              serif: ['Playfair Display', 'serif'], // Added for headings
+            },
+            backgroundImage: {
+              'gold-gradient': 'linear-gradient(135deg, #D4AF37 0%, #F3E5AB 50%, #B4941F 100%)',
             }
           }
         }
       }
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Added Playfair Display for Luxury feel -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
       body {
         font-family: 'Inter', sans-serif;
       }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Playfair Display', serif;
+      }
+      
       /* Custom scrollbar for before/after slider handle */
       input[type=range]::-webkit-slider-thumb {
         pointer-events: all;
@@ -58,6 +68,12 @@
         height: 24px;
         -webkit-appearance: none;
         pointer-events: all;
+      }
+      
+      .text-gold-gradient {
+        background: linear-gradient(135deg, #D4AF37 0%, #F0E68C 50%, #B8860B 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
       }
     </style>
   <script type="importmap">
@@ -70,7 +86,7 @@
 }
 </script>
 </head>
-  <body class="bg-gray-50 text-slate-800">
+  <body class="bg-gray-50 text-slate-800 antialiased selection:bg-brand-gold selection:text-brand-blue">
     <div id="root"></div>
   </body>
 </html>

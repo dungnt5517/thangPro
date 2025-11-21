@@ -10,45 +10,52 @@ const Header: React.FC<HeaderProps> = ({ title, phone }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Extract main brand name if possible, otherwise use title
   const brandName = title.split('-')[0].trim() || title;
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-brand-blue/95 shadow-lg py-2 backdrop-blur-sm' : 'bg-transparent py-4'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        isScrolled 
+          ? 'bg-brand-blue/90 backdrop-blur-md shadow-xl py-3 border-b border-white/10' 
+          : 'bg-transparent py-6'
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <div className="flex items-center">
-          {/* Logo Area */}
-          <div className="text-2xl font-bold text-white">
-            <span className="text-brand-gold border-2 border-brand-gold px-2 py-1 rounded-md">
-              {brandName.substring(0, 5)}
+        {/* Logo */}
+        <div className="flex items-center group cursor-pointer" onClick={() => window.scrollTo(0, 0)}>
+          <div className="text-2xl md:text-3xl font-serif font-bold text-white tracking-wide">
+            <span className="text-transparent bg-clip-text bg-gold-gradient">
+              {brandName}
             </span>
-            <span className="ml-1">{brandName.substring(5)}</span>
           </div>
         </div>
 
-        <div className="flex items-center gap-4">
+        {/* Actions */}
+        <div className="flex items-center gap-6">
           <button
-            onClick={() => document.getElementById('offer_cta')?.scrollIntoView({ behavior: 'smooth' })}
-            className="hidden md:block text-white hover:text-brand-gold transition font-medium"
+            onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
+            className="hidden md:block text-slate-200 hover:text-brand-gold transition font-medium text-sm tracking-widest uppercase"
           >
-            Liên hệ
+            Dịch vụ
+          </button>
+          <button
+            onClick={() => document.getElementById('process')?.scrollIntoView({ behavior: 'smooth' })}
+            className="hidden md:block text-slate-200 hover:text-brand-gold transition font-medium text-sm tracking-widest uppercase"
+          >
+            Quy trình
           </button>
           <a
             href={`tel:${phone.replace(/[^\d]/g, '')}`}
-            className="bg-brand-gold text-brand-blue font-bold py-2 px-4 rounded-full hover:bg-yellow-400 transition shadow-md animate-pulse flex items-center gap-2"
+            className="bg-gold-gradient text-brand-blue font-bold py-3 px-6 rounded-full hover:shadow-[0_0_20px_rgba(212,175,55,0.6)] transition-all duration-300 transform hover:-translate-y-1 flex items-center gap-2 text-sm uppercase tracking-wider"
           >
-            <i className="fa-solid fa-phone"></i>
-            <span className="hidden sm:inline">GỌI NGAY</span>
+            <i className="fa-solid fa-phone-volume"></i>
+            <span className="hidden sm:inline">{phone}</span>
           </a>
         </div>
       </div>
