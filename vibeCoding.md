@@ -73,3 +73,6 @@ Dưới đây là danh sách tổng hợp các câu lệnh (Prompt) đã đượ
 
 12. **Yêu cầu tổng hợp (Hiện tại):**
     > Tổng hợp tất cả các Prompt mà tôi đã input cho bạn vào 1 file có tên là vibeCoding.md và có đánh số thứ tự
+
+13. **Thiết lập quy tắc tự động log prompt:**
+    > Bây giờ mỗi khi tôi input prompt thì nhiệm vụ bạn hãy cập nhật vào file vibeCoding.md sau đó mới thực thi Prompt. Bạn hiểu ý tôi chứ và bắt đầu luôn từ Prompt này nhé
